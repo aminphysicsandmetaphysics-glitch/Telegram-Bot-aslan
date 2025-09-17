@@ -9,9 +9,6 @@ from app.admin.views import router as admin_router
 app.mount("/static", StaticFiles(directory="app/admin/static"), name="static")
 app.include_router(admin_router)
 
-app = FastAPI(title="VIP Telegram Bot")
-app.include_router(admin_router)
-
 register_handlers()
 
 @app.on_event("startup")
