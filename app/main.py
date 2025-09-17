@@ -3,6 +3,11 @@ from aiogram.types import Update
 from .config import settings
 from .bot import bot, dp, register_handlers
 from .admin.views import router as admin_router
+from fastapi.staticfiles import StaticFiles
+from app.admin.views import router as admin_router
+
+app.mount("/static", StaticFiles(directory="app/admin/static"), name="static")
+app.include_router(admin_router)
 
 app = FastAPI(title="VIP Telegram Bot")
 app.include_router(admin_router)
