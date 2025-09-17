@@ -10,9 +10,9 @@ services:
       - key: BASE_URL
         sync: false
       - key: WEBHOOK_PATH
-        value: /webhook
+        value: "/webhook"
       - key: ADMIN_USERNAME
-        value: AMIN.101
+        value: "AMIN.101"
       - key: ADMIN_PASSWORD_HASH
         sync: false
       - key: ADMIN_JWT_SECRET
@@ -22,25 +22,30 @@ services:
           name: vip-bot-db
           property: connectionString
       - key: PAYMENT_PROVIDER
-        value: zarinpal
+        value: "zarinpal"   # یا "crypto"
       - key: ZARINPAL_MERCHANT
         sync: false
       - key: CRYPTO_API_KEY
         sync: false
       - key: CURRENCY
-        value: IRR
+        value: "IRR"
       - key: SUPPORT_USERNAME
-        value: YourSupportUser
+        value: "YourSupportUser"
       - key: FREE_CHANNEL
-        value: @your_free_channel
+        value: "@your_free_channel"
       - key: INSTAGRAM_URL
-        value: https://instagram.com/yourbrand
+        value: "https://instagram.com/yourbrand"
       - key: VIP_RESULTS_CHANNEL
-        value: @your_vip_results
+        value: "@your_vip_results"
       - key: SPONSOR_CHANNELS
-        value: @yourSponsor1,@yourSponsor2
+        value: "@yourSponsor1,@yourSponsor2"
       - key: CALENDAR_API_KEY
         sync: false
+      # فقط برای کریپتو (در صورت نیاز):
+      - key: CRYPTO_USDT_NETWORKS
+        value: "TRC20,BEP20"
+      - key: CRYPTO_USDT_ONLY
+        value: "true"
     autoDeploy: true
 databases:
   - name: vip-bot-db
