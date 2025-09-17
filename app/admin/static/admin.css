@@ -1,0 +1,5 @@
+body{font-family:Tahoma, sans-serif; direction:rtl; padding:20px;}
+aside{float:right;width:200px;}
+main{margin-right:220px;}
+table{width:100%;border-collapse:collapse}
+td,th{border:1px solid #ddd;padding:8px}

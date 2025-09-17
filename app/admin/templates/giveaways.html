@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>قرعه‌کشی‌ها</h1>
+<p><a href="/admin/giveaways/create">+ ایجاد قرعه‌کشی جدید</a></p>
+<ul>
+  {% for g in gws %}
+    <li>{{ g.title }} — {{ 'فعال' if g.is_active else 'غیرفعال' }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}
