@@ -18,9 +18,9 @@ services:
       - key: ADMIN_JWT_SECRET
         generateValue: true
       - key: DATABASE_URL
-        sync: false           # ← بعداً از Neon می‌ذاریم
+        sync: false        # خودت دستی ست می‌کنی
       - key: PAYMENT_PROVIDER
-        value: "zarinpal"     # یا "crypto"
+        value: "zarinpal"
       - key: ZARINPAL_MERCHANT
         sync: false
       - key: CRYPTO_API_KEY
@@ -39,8 +39,4 @@ services:
         value: "@yourSponsor1,@yourSponsor2"
       - key: CALENDAR_API_KEY
         sync: false
-      - key: CRYPTO_USDT_NETWORKS
-        value: "TRC20,BEP20"
-      - key: CRYPTO_USDT_ONLY
-        value: "true"
     autoDeploy: true
